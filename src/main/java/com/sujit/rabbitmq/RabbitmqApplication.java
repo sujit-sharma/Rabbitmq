@@ -9,7 +9,7 @@ public class RabbitmqApplication {
     public static void main(String[] args) {
         SpringApplication.run(RabbitmqApplication.class, args);
         MessageBuilder messageBuilder = new MessageBuilder();
-        System.out.println(messageBuilder.createMessage());
+        messageBuilder.createMessage();
     }
 
 }
