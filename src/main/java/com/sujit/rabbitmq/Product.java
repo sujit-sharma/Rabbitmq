@@ -39,7 +39,7 @@ public class Product {
 
             i++;
             try {
-                rabbitTemplate.convertAndSend("product.exchange.name", "","Hello world");
+                rabbitTemplate.convertAndSend("product.exchange.name", "","Hello world" +i);
                 System.out.println("Data send Successfully");
 
 

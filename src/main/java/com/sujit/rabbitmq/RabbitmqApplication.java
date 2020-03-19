@@ -20,8 +20,18 @@ public class RabbitmqApplication {
 
     @Bean
     public void  StartApp() {
-        Product messageBuilder = new Product();
-        messageBuilder.sendMessage(rabbitTemplate);
+    new Thread(new Runnable () {
+        @Override
+        public void run() {
+            Product messageBuilder = new Product();
+            messageBuilder.sendMessage(rabbitTemplate);
+
+        }
+    }).start();
+
+
+
+
 
 
 
