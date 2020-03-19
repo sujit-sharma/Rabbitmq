@@ -12,4 +12,10 @@ public class QueueConfig {
     public Queue productQueue(@Value("${product.queue.name}") final String queueName) {
         return new Queue(queueName);
     }
+
+
+    @Bean
+    public Queue salesQueue(@Value("${sales.queue.name}") final String queueName) {
+        return new Queue(queueName);
+    }
 }

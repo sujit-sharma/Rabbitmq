@@ -12,6 +12,11 @@ public class BindingExchange {
 
     @Bean
     public Binding bindingFanoutExchangeQueueProduct(final Queue productQueue, final Exchange productFanoutExchange) {
-       return BindingBuilder.bind(productQueue).to(productFanoutExchange).with("*").noargs();
+       return BindingBuilder.bind(productQueue).to(productFanoutExchange).with("").noargs();
+    }
+
+    @Bean
+    public Binding bindingFanoutExchangeQueueSales(final Queue salesQueue, final Exchange productFanoutExchange) {
+        return BindingBuilder.bind(salesQueue).to(productFanoutExchange).with("").noargs();
     }
 }
